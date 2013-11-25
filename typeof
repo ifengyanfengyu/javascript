@@ -1,0 +1,12 @@
+javascript 五种基本数据类型
+
+undefined  // var hello  未赋值
+boolean   // 布尔值  true false
+string  //字符串
+number  //数字
+object  //对象  null 特殊的对象，
+function  //函数
+
+
+typeof 操作符,返回数据类型
+
