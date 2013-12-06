@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<style>
+body { margin:0; padding:0;}
+.div1 { width:800px; height:400px; background:#CCC; margin-left:auto; margin-right:auto;}
+.div2 { width:800px; height:200px; background:#F00; clear:both;}
+.div1 ul { list-style-type: none;  }
+.div1 ul li { float:left; margin-left:20px; background:#993; text-align:center; width:150px; position:relative;}
+/*.div1 .son { display:none;position:absolute;}*/
+.div1 .son { display:none; position:absolute; left:0; top:18px;}
+
+.div1 .son li { margin-left:10px; clear:both; background:#FFF; display:inline; width:50px; opacity:0.5; height:60px;filter:alpha(opacity=50);}
+
+</style>
+<script type="text/javascript" src="jquery.js"></script>
+<!--<script>
+$(function(){
+		$(".div1 li").hover(function(){
+		$(this).find("ul").show();
+			},function(){
+		$(this).find("ul").hide();
+			});
+		   })
+
+</script>-->
+<script>
+$(function (){$(".div1 ul li:has(ul)").hover(function() {$(this).children("a").css({color:"#fff"});if($(this).find("li").length > 0){$(this).children("ul").stop(true, true).slideDown(400)} },function() {$(this).children("a").css({color:"#fff"});$(this).children("ul").stop(true, true).slideUp("fast")});})
+
+</script>
+<title>无标题文档</title>
+</head>
+
+<body>
+<div class="div1">
+	<ul>
+		<li>11111
+        	<ul class="son">
+				<li>a1111</li>
+        		<li>b2222</li>
+        		<li>c3333</li>
+        		<li>d4444</li>        
+    		</ul>
+        </li>
+        <li>22222
+        	<ul class="son">
+				<li>a1111</li>
+        		<li>b2222</li>
+        		<li>c3333</li>
+        		<li>d4444</li> 
+            </ul>
+        </li>
+        <li>33333
+        	<ul class="son">
+				<li>a1111</li>
+        		<li>b2222</li>
+        		<li>c3333</li>
+        		<li>d4444</li>
+            </ul> 
+        </li>
+        <li>33333
+        	<ul class="son">
+				<li>a1111</li>
+        		<li>b2222</li>
+        		<li>c3333</li>
+        		<li>d4444</li>
+            </ul> 
+        </li>
+       
+    </ul>
+    
+    
+  <div class="div2">222222222222222222222222222222222222222222222222222222222222222222222222222222222222</div>
+</div>
+</body>
+</html>
